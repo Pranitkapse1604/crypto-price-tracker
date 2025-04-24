@@ -50,3 +50,7 @@ cd crypto-price-tracker
 npm install
 npm run dev
 
+## Demo Video 
+
+<video src="demo.mp4" controls width="90%"></video>
+
