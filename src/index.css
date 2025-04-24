@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+  @layer utilities{
+    .table-heading{
+      @apply mx-2 text-nowrap
+    }
+  }
+
