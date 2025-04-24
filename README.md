@@ -52,5 +52,7 @@ npm run dev
 
 ## Demo Video 
 
-<video src="demo.mp4" controls width="90%"></video>
+<video src="demo.mp4" controls width="100%"></video>
+
+this will not play video kindly please download "demo.mp4" file to see demo
 
