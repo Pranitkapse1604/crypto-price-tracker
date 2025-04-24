@@ -1,12 +1,52 @@
-# React + Vite
+# Crypto Price Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, real-time cryptocurrency price tracker built using **React** and **Redux Toolkit**, simulating WebSocket updates. Inspired by platforms like CoinMarketCap, it displays detailed stats of five major cryptocurrencies including BTC, ETH, USDT, XRP, and BNB.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Real-time data simulation (price, volume, and % changes every 1–2 seconds)
+- Redux Toolkit for global state management
+- Fully responsive and accessible data table
+- Color-coded % changes (green for positive, red for negative)
+- Static 7-day mini chart preview
+- Clean UI with efficient performance using selectors
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- **React** — Frontend framework for UI components
+- **Redux Toolkit** — State management using `createSlice` and `configureStore`
+- **React-Redux** — Hooks like `useSelector` and `useDispatch`
+- **CSS / Tailwind CSS (if used)** — For responsive and aesthetic styling
+- **setInterval** — To simulate WebSocket updates
+- **rechart library for charts** — Static 7-day graph visualization
+
+---
+
+---
+
+## How it Works
+
+- Crypto data (5 assets) is stored in Redux state.
+- `setInterval` runs every 1-2 seconds to randomly change:
+  - Price
+  - 1h, 24h, 7d percentage changes
+  - 24h trading volume
+- Redux actions are dispatched to update state globally.
+- `useSelector` is used to access and re-render only required data.
+
+---
+
+## Getting Started
+
+Clone and run the project locally:
+
+```bash
+git clone https://github.com/your-username/crypto-price-tracker.git
+cd crypto-price-tracker
+npm install
+npm run dev
+
